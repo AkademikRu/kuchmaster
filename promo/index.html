@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кухмастер - Кухни на заказ в Саратове</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+    <!-- Добавьте модальное окно-->
+    <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="modal-title">Просмотр изображения</div>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive center-block" src="" alt="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <!-- Блок кода, содержащий галерею Thumbnails -->
+
+
+
+
+  <h1>Встроенные кухни на заказ <br> по индивидуальному проекту точно в срок</h1>
+
+
+
+  <div id="block2">
+    <div class="container">
+
+      <h2>Выбирайте то, что нужно именно вам</h2>
+      <h3>стиль - от нежного прованса до экспрессивного хайтека <br> Любой цвет - от ярко-алого до слепительно-белого</h3>
+
+      <div class="row"> 
+        <div class="col-sm-6 col-md-4"> 
+          
+          <div class="okontovka">
+            <a href="#" class="thumbnail"><img src="img/vibr/Zelenaya-kuhnya.jpg" alt="..."></a>
+            <div class="caption">           
+              <p class="description">Кухня с фасадом из МДФ с покрытием пленкой ПВХ <br> Более 2000 расцветок, размер и комплектация - любые. <br> Цена - от 12 тысяч руб за погонный метр</p>
+              <p class="title">Кухня для ярких неординарных людей, умеющих жить экономно и со вкусом</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6 col-md-4"> 
+          <a href="#" class="thumbnail"><img src="img/vibr/kuhnya-modern-shirokaya-ramka.jpg" alt="..."></a>
+          <div class="caption">           
+            <p>Кухня с фасадом из МДФ с покрытием пленкой ПВХ <br> Более 2000 расцветок, размер и комплектация - любые. <br> Цена - от 12 тысяч руб за погонный метр</p>
+            <p>Кухня для ярких неординарных людей, умеющих жить экономно и со вкусом</p>
+          </div>          
+        </div>
+
+        <div class="col-sm-6 col-md-4"> 
+          <a href="#" class="thumbnail"><img src="img/vibr/Kuhnya-shpon.jpg" alt="..."></a>
+          <div class="caption">           
+            <p>Кухня с фасадом из МДФ с покрытием пленкой ПВХ <br> Более 2000 расцветок, размер и комплектация - любые. <br> Цена - от 12 тысяч руб за погонный метр</p>
+            <p>Кухня для ярких неординарных людей, умеющих жить экономно и со вкусом</p>
+          </div>          
+        </div>
+
+
+
+        <div class="col-sm-6 col-md-4"> 
+          <a href="#" class="thumbnail"><img src="img/vibr/kuhnya-plastik.jpg" alt="..."></a>
+          <div class="caption">           
+            <p>Кухня с фасадом из МДФ с покрытием пленкой ПВХ <br> Более 2000 расцветок, размер и комплектация - любые. <br> Цена - от 12 тысяч руб за погонный метр</p>
+            <p>Кухня для ярких неординарных людей, умеющих жить экономно и со вкусом</p>
+          </div>          
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- image-modal -->
+    <script>
+      // После загрузки DOM-дерева (страницы)
+      $(function() {     
+        //при нажатии на ссылку, содержащую Thumbnail
+        $('a.thumbnail').click(function(e) {
+          //отменить стандартное действие браузера
+          e.preventDefault();
+          //присвоить атрибуту scr элемента img модального окна
+          //значение атрибута scr изображения, которое обёрнуто
+          //вокруг элемента a, на который нажал пользователь
+          $('#image-modal .modal-body img').attr('src', $(this).find('img').attr('src'));
+          //открыть модальное окно
+          $("#image-modal").modal('show');
+        });
+        //при нажатию на изображение внутри модального окна 
+        //закрыть его (модальное окно)
+        $('#image-modal .modal-body img').on('click', function() {
+          $("#image-modal").modal('hide')
+        });
+      });
+    </script>
+
+  </body>
+</html>
