@@ -1,0 +1,26 @@
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+*					{ margin: 0; padding: 0; }
+body				{ font: 14px Georgia, serif; }
+
+#page-wrap		    { width: 600px; margin: 0 auto; }
+
+table               { border-collapse: collapse; width: 100%; margin-top: 60px; }
+td,th                  { border: 1px solid #ccc; padding: 10px; }
+
+thead{ 
+	position: 
+	fixed; 
+	height: 40px; 
+	top: 0;
+	background-color: #fff;
+	 }
+
+.slim               { /*width: 88px;*/ }
+.hover              { background-color: #eee; }
+
+.col1{width: 231px;}
