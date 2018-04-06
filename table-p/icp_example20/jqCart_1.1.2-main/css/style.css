@@ -1,0 +1,25 @@
+
+table{
+	width: 100%; 
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: collapse;
+    width: 100%;
+}
+
+
+td{
+	border:1px solid #ccc;
+	padding: 10px;
+}
+/*****main**************/
+
+.bottom {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+}
+
+.jqcart-cart-title, .jqcart-orderform{display: none;}
+
